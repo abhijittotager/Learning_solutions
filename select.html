@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Buttons</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/framer-motion/10.12.1/framer-motion.umd.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+        .button {
+            padding: 15px 30px;
+            border: none;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out, background-color 0.3s;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+        .button:hover {
+            transform: scale(1.15);
+        }
+        .button:active {
+            transform: scale(0.95);
+        }
+        .blue-button {
+            background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+        }
+        .blue-button:hover {
+            background: linear-gradient(90deg, #2563eb, #1e40af);
+        }
+        .green-button {
+            background: linear-gradient(90deg, #10b981, #065f46);
+        }
+        .green-button:hover {
+            background: linear-gradient(90deg, #059669, #064e3b);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .button-container {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <a href="https://abhijittotager.github.io/Learning_solutions/2ndpage.html" class="button blue-button">Final Year Projects</a>
+        <button class="button green-button">International Projects</button>
+    </div>
+</body>
+</html>
